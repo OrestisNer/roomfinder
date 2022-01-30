@@ -4,8 +4,11 @@
   "description": "automatically send messages for available rooms in boligportal",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "author": "Orestis Rafail Nerantzis",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^13.1.2"
+  }
 }
