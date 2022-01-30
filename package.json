@@ -1,0 +1,11 @@
+{
+  "name": "roomfinder",
+  "version": "1.0.0",
+  "description": "automatically send messages for available rooms in boligportal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orestis Rafail Nerantzis",
+  "license": "ISC"
+}
