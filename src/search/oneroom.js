@@ -1,5 +1,5 @@
 import { viewPort } from '../browser.js';
-import { getAllPageAdLinks, sendMessage, contactLandlord } from '../ads.js';
+import { getAllPageAdLinks, contactLandlord } from '../ads.js';
 
 const oneRoomSearch = async () => {
     const oneRoomSearchPage = await global.browser.newPage();
@@ -22,6 +22,8 @@ const oneRoomSearch = async () => {
         const adLink = adLinks[i];
         await contactLandlord(adLink);
     }
+
+    // await contactLandlord('https://www.boligportal.dk/v%C3%A6relser/k%C3%B8benhavn/10m2-1-vaer-id-5059875');
 }
 
 const setFilters = async (oneRoomSearchPage) => {

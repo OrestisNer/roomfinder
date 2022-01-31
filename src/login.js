@@ -9,7 +9,9 @@ const login = async () => {
     await loginPage.type('input[data-test-id="loginPassword"]', process.env.PASSWORD);
 
     await loginPage.click('button[data-test-id="loginSubmit"]');
+    await loginPage.waitForTimeout(1000);
     await loginPage.close();
+
 }
 
 

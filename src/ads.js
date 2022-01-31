@@ -1,4 +1,5 @@
 import { getNextButton, getTotalPages } from './paging.js';
+import { viewPort } from './browser.js';
 
 export const adsPerPage = process.env.ADS_PER_PAGE || 18;
 
@@ -20,7 +21,19 @@ export const getAllPageAdLinks = async (page) => {
 
 
 export const contactLandlord = async (adUrl) => {
+    const adPage = await global.browser.newPage();
+    await adPage.setViewport(viewPort);
 
+    await adPage.goto(
+        adUrl,
+        { waitUntil: 'networkidle2' }
+    );
+
+    await adPage.click('button[data-test-id="contactCTAButton"]');
+    await adPage.waitForSelector('#modal-root textarea');
+    await adPage.type('#modal-root textarea', 'Hello its me :)');
+    await adPage.waitForTimeout(3000);
+    await adPage.close();
 }
 
 const getHrefs = async (page, selector) => {
