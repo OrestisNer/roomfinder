@@ -1,4 +1,4 @@
-import { adsPerPage } from './ads.js';
+const adsPerPage = process.env.ADS_PER_PAGE || 18;
 
 export const getNextButton = async (page) => {
     const buttons = await page.$$('button.temporaryButtonClassname');

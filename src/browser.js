@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 export const initBrowser = async () => {
     global.browser = await puppeteer.launch({
-        headless: false,
+        headless: process.env.HEADLESS == "true" ? true : false,
         args: [
             '--start-maximized'
         ]

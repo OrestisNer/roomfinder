@@ -1,0 +1,32 @@
+[
+    {
+        "filters": {
+            "type": "rental_room",
+            "max_price": "8000",
+            "min_m2": "10",
+            "min_no_rooms": "1",
+            "max_no_rooms": "1",
+            "takeover_date": "05/01/2022"
+        }
+    },
+    {
+        "filters": {
+            "type": "rental_apartment",
+            "max_price": "12000",
+            "min_m2": "50",
+            "min_no_rooms": "3",
+            "max_no_rooms": "3",
+            "takeover_date": "05/01/2022"
+        }
+    },
+    {
+        "filters": {
+            "type": "rental_apartment",
+            "max_price": "18000",
+            "min_m2": "80",
+            "min_no_rooms": "4",
+            "max_no_rooms": "4",
+            "takeover_date": "05/01/2022"
+        }
+    }
+]
